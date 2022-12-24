@@ -1,0 +1,31 @@
+$verde: #60b48a;
+$amarillo: #f0dfaf;
+
+article {
+  header {
+    padding-bottom: 0.5rem;
+    h3 {
+      color: $amarillo;
+    }
+  }
+  ul {
+    li {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+  .keywords {
+    padding: 0.5rem 0;
+    li {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      background: $verde;
+      margin: 0.25rem;
+      text-transform: lowercase;
+    }
+  }
+  p {
+    padding-bottom: 0.5rem;
+  }
+}

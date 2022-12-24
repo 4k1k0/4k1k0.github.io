@@ -1,0 +1,20 @@
+<article>
+  <header>
+    <h3>{{experience.title}}</h3>
+    <h4>{{experience.company}} {{experience.flag}}</h4>
+    <ng-container *ngIf="experience.toTime; else noToTime">
+      <time [dateTime]="experience.fromTime">{{experience.fromText}}</time> - <time [dateTime]="experience.toTime">{{experience.toText}}</time>
+    </ng-container>
+    <ng-template #noToTime>
+      <time [dateTime]="experience.fromTime">{{experience.fromText}}</time> - {{experience.toText}}
+    </ng-template>
+  </header>
+  <ul>
+    <li *ngFor="let item of experience.activities">
+      {{item}}.
+    </li>
+  </ul>
+  <ul class="keywords">
+    <li *ngFor="let item of experience.tags">{{item}}</li>
+  </ul>
+</article>

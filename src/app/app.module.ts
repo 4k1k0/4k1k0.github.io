@@ -11,6 +11,7 @@ import { AboutComponent } from './paginas/about/about.component';
 import { NotMeComponent } from './paginas/not-me/not-me.component';
 import { CvComponent } from './paginas/cv/cv.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { JobExperienceComponent } from './paginas/cv/job-experience/job-experience.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     AboutComponent,
     NotMeComponent,
-    CvComponent
+    CvComponent,
+    JobExperienceComponent,
   ],
   imports: [
     BrowserModule,

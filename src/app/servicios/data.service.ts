@@ -28,21 +28,6 @@ export class DataService {
       url: 'https://github.com/4k1k0'
     },
     {
-      nombre: 'Age',
-      descripcion: '28'
-    },
-    {
-      nombre: 'Editor',
-      descripcion: 'Vim'
-    },
-    {
-      nombre: 'Type',
-      descripcion: 'Ghost'
-    },
-    {
-      nombre: 'Location',
-      descripcion: 'Mexico City'
-    }, {
       nombre: 'Redbubble',
       descripcion: '4k1k0-zyx',
       url: 'https://www.redbubble.com/es/people/4k1k0-zyx/shop'
@@ -55,7 +40,34 @@ export class DataService {
     {
       nombre: 'PSN',
       descripcion: 'wakogitv'
-    }
+    },
+    {
+      nombre: 'Mastodon',
+      descripcion: '@wako',
+      url: 'https://mstdn.social/@wako'
+    },
+    {
+      nombre: 'Tumblr',
+      descripcion: 'Stuff',
+      url: 'https://sillyinfluencerwhore-blog.tumblr.com/'
+    },
+    {
+      nombre: 'Dev.to',
+      descripcion: '4k1k0',
+      url: 'https://dev.to/4k1k0'
+    },
+    {
+      nombre: 'Nintendo',
+      descripcion: 'SW-7022-9992-7512',
+    },
+    {
+      nombre: 'Discord',
+      descripcion: 'wako#7142',
+    },
+    {
+      nombre: 'Steam',
+      descripcion: 'akko_lambda',
+    },
   ];
 
   constructor() {
