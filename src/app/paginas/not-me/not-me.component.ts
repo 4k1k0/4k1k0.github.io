@@ -5,7 +5,8 @@ import { Social } from '../../models/social.model';
 @Component({
   selector: 'app-not-me',
   templateUrl: './not-me.component.html',
-  styleUrls: ['./not-me.component.scss']
+  styleUrls: ['./not-me.component.scss'],
+  standalone: false
 })
 export class NotMeComponent implements OnInit {
 

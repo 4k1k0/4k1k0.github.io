@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { JobExperience } from '../../models/job_experience.model';
-import { JobExperienceService } from 'src/app/servicios/job_experience.service';
+import { JobExperienceService } from '../../servicios/job_experience.service';
 
 interface Skill {
   nombre: string;
@@ -13,9 +13,10 @@ interface Skill {
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.scss']
+  styleUrls: ['./cv.component.scss'],
+  standalone: false
 })
-export class CvComponent {
+export class CvComponent implements OnInit {
   faEnvelope = faEnvelope;
   faLinkedin = faLinkedin;
   faTwitter = faTwitter;

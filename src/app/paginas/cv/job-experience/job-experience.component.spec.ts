@@ -14,6 +14,16 @@ describe('JobExperienceComponent', () => {
 
     fixture = TestBed.createComponent(JobExperienceComponent);
     component = fixture.componentInstance;
+    component.experience = {
+      title: 'Developer',
+      company: 'Test Co',
+      flag: '🇲🇽',
+      fromText: '2022',
+      fromTime: '2022-01-01',
+      toText: 'Present',
+      activities: ['Coding'],
+      tags: ['Angular', 'TypeScript']
+    };
     fixture.detectChanges();
   });
 

@@ -1,15 +1,16 @@
-import { Component, Input } from '@angular/core';
-import {JobExperience} from '../../../models/job_experience.model'
+import { Component, Input, OnInit } from '@angular/core';
+import { JobExperience } from '../../../models/job_experience.model';
 
 @Component({
   selector: 'app-job-experience',
   templateUrl: './job-experience.component.html',
-  styleUrls: ['./job-experience.component.scss']
+  styleUrls: ['./job-experience.component.scss'],
+  standalone: false
 })
-export class JobExperienceComponent {
-  @Input() experience: JobExperience;
+export class JobExperienceComponent implements OnInit {
+  @Input() experience!: JobExperience;
 
   ngOnInit() {
-    this.experience.tags.sort((a: string, b: string) => a.toLowerCase() > b.toLowerCase() ? 1 : -1)
+    this.experience?.tags.sort((a: string, b: string) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
   }
 }

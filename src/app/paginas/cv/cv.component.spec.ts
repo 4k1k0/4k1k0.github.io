@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { CvComponent } from './cv.component';
+import { JobExperienceComponent } from './job-experience/job-experience.component';
 
 describe('CvComponent', () => {
   let component: CvComponent;
@@ -8,7 +10,8 @@ describe('CvComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CvComponent ]
+      imports: [ FontAwesomeModule ],
+      declarations: [ CvComponent, JobExperienceComponent ]
     })
     .compileComponents();
   }));
