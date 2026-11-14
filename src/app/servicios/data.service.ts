@@ -8,9 +8,9 @@ export class DataService {
 
   specs: Social[] = [
     {
-      nombre: 'Twitter',
-      descripcion: '@akkonomi',
-      url: 'https://twitter.com/akkonomi'
+      nombre: 'Bluesky',
+      descripcion: '@wako',
+      url: 'https://bsky.app/profile/wako.bsky.social'
     },
     {
       nombre: 'LinkedIn',
@@ -18,19 +18,9 @@ export class DataService {
       url: 'https://www.linkedin.com/in/rodrigo-patino-dev/'
     },
     {
-      nombre: 'Instagram',
-      descripcion: '@haskellcatalv',
-      url: 'https://www.instagram.com/haskellcatalv'
-    },
-    {
       nombre: 'GitHub',
       descripcion: '@4k1k0',
       url: 'https://github.com/4k1k0'
-    },
-    {
-      nombre: 'Redbubble',
-      descripcion: '4k1k0-zyx',
-      url: 'https://www.redbubble.com/es/people/4k1k0-zyx/shop'
     },
     {
       nombre: 'Last.fm',
@@ -45,11 +35,6 @@ export class DataService {
       nombre: 'Mastodon',
       descripcion: '@wako',
       url: 'https://mstdn.social/@wako'
-    },
-    {
-      nombre: 'Tumblr',
-      descripcion: 'Stuff',
-      url: 'https://sillyinfluencerwhore-blog.tumblr.com/'
     },
     {
       nombre: 'Dev.to',

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faBluesky } from '@fortawesome/free-brands-svg-icons';
 import { JobExperience } from '../../models/job_experience.model';
 import { JobExperienceService } from '../../servicios/job_experience.service';
 
 interface Skill {
   nombre: string;
-  nivel: 'Básico' | 'Intermedio';
 }
 
 
@@ -19,25 +18,25 @@ interface Skill {
 export class CvComponent implements OnInit {
   faEnvelope = faEnvelope;
   faLinkedin = faLinkedin;
-  faTwitter = faTwitter;
+  faBluesky = faBluesky;
   faGithub = faGithub;
 
   skills: Skill[] = [
-    {nombre: 'Angular', nivel: 'Intermedio'},
-    {nombre: 'Git', nivel: 'Intermedio'},
-    {nombre: 'Javascript', nivel: 'Intermedio'},
-    {nombre: 'MongoDB', nivel: 'Básico'},
-    {nombre: 'MySQL', nivel: 'Intermedio'},
-    {nombre: 'Node.js', nivel: 'Intermedio'},
-    {nombre: 'PostgreSQL', nivel: 'Intermedio'},
-    {nombre: 'TypeScript', nivel: 'Intermedio'},
-    {nombre: 'Docker', nivel: 'Básico'},
-    {nombre: 'AWS', nivel: 'Intermedio'},
-    {nombre: 'React', nivel: 'Básico'},
-    {nombre: 'Redis', nivel: 'Básico'},
-    {nombre: 'Go', nivel: 'Intermedio'},
-    {nombre: 'Elixir', nivel: 'Básico'},
-    {nombre: 'REST', nivel: 'Intermedio'},
+    {nombre: 'Angular'},
+    {nombre: 'Git'},
+    {nombre: 'Javascript'},
+    {nombre: 'MongoDB'},
+    {nombre: 'MySQL'},
+    {nombre: 'Node.js'},
+    {nombre: 'PostgreSQL'},
+    {nombre: 'TypeScript'},
+    {nombre: 'Docker'},
+    {nombre: 'AWS'},
+    {nombre: 'Rust'},
+    {nombre: 'Redis'},
+    {nombre: 'Go'},
+    {nombre: 'Elixir'},
+    {nombre: 'REST'},
   ];
 
   jobExperience: JobExperience[];
