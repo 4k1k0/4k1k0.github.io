@@ -25,7 +25,8 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "dist/wako"
+              "base": "dist/wako",
+              "browser": ""
             },
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -38,7 +39,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest",
-              "src/_redirects"
+              "src/_redirects",
+              "CNAME"
             ],
             "styles": [
               "src/styles.scss"

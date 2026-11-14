@@ -40,17 +40,22 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Prepare GitHub Pages artifacts (SPA 404 fallback & CNAME)
+      - name: Prepare dist directory for GitHub Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
         run: |
-          cp dist/wako/browser/index.html dist/wako/browser/404.html
-          cp CNAME dist/wako/browser/CNAME
+          cp dist/wako/index.html dist/wako/404.html
+          cp CNAME dist/wako/CNAME
+          touch dist/wako/.nojekyll
+
+      - name: Setup Pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        uses: actions/configure-pages@v5
 
       - name: Upload GitHub Pages artifact
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/wako/browser
+          path: ./dist/wako
 
   deploy:
     name: Deploy to GitHub Pages
