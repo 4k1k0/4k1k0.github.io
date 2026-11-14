@@ -1,16 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
 import { JobExperience } from '../../../models/job_experience.model';
 
 @Component({
   selector: 'app-job-experience',
   templateUrl: './job-experience.component.html',
-  styleUrls: ['./job-experience.component.scss'],
-  standalone: false
+  styleUrl: './job-experience.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class JobExperienceComponent implements OnInit {
-  @Input() experience!: JobExperience;
+export class JobExperienceComponent implements OnChanges {
+  @Input({ required: true }) experience!: JobExperience;
+  sortedTags: string[] = [];
 
-  ngOnInit() {
-    this.experience?.tags.sort((a: string, b: string) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
+  ngOnChanges() {
+    this.sortedTags = [...(this.experience?.tags ?? [])].sort((a, b) =>
+      a.localeCompare(b, undefined, { sensitivity: 'base' })
+    );
   }
 }

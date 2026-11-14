@@ -1,21 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
- * {
-   padding: 0;
-   margin: 0;
- }
+/* Global styles and CSS Custom Properties */
+:root {
+  color-scheme: dark;
+  --bg-primary: #2c2c2c;
+  --bg-surface: #3c3c3c;
+  --color-text: #fff;
+  --color-accent: #60b48a;
+  --color-highlight: #f0dfaf;
+  --color-selection: #dc8cc3;
+}
 
- body {
-   background: #2c2c2c;
-   color: #fff;
-   font-family: Rubik,helvetica,arial,sans-serif;
-   a {
-     color: #60b48a;
-     text-decoration: none;
-   }
-   h2 {
-     text-align: center;
-   }
-   ::selection {
-    background-color: #dc8cc3;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--color-text);
+  font-family: Rubik, helvetica, arial, sans-serif;
+  line-height: 1.5;
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
   }
- }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  ::selection {
+    background-color: var(--color-selection);
+  }
+}

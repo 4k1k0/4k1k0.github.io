@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { JobExperienceComponent } from './job-experience.component';
 
 describe('JobExperienceComponent', () => {
@@ -8,9 +7,8 @@ describe('JobExperienceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JobExperienceComponent ]
-    })
-    .compileComponents();
+      imports: [JobExperienceComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(JobExperienceComponent);
     component = fixture.componentInstance;

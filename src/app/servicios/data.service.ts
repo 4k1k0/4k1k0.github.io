@@ -6,7 +6,7 @@ import { Social } from '../models/social.model';
 })
 export class DataService {
 
-  specs: Social[] = [
+  readonly specs: Social[] = [
     {
       nombre: 'Bluesky',
       descripcion: '@wako',
@@ -53,9 +53,6 @@ export class DataService {
       nombre: 'Steam',
       descripcion: 'akko_lambda',
     },
-  ];
+  ].sort((a, b) => a.nombre.localeCompare(b.nombre, undefined, { sensitivity: 'base' }));
 
-  constructor() {
-    this.specs.sort((a: Social, b: Social) => a.nombre.toLowerCase() > b.nombre.toLowerCase() ? 1 : -1);
-  }
 }

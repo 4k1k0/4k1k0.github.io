@@ -8,12 +8,12 @@ describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([])
-      ],
-      declarations: [
-        AppComponent,
+        RouterModule.forRoot([]),
         HeaderComponent,
         FooterComponent
+      ],
+      declarations: [
+        AppComponent
       ],
     }).compileComponents();
   }));

@@ -1,5 +1,5 @@
 main {
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-  padding: 1rem 0;
+  width: min(80%, 65rem);
+  margin-inline: auto;
+  padding-block: 1rem;
 }

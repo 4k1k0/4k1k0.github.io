@@ -1,14 +1,18 @@
 header {
-  background: #3c3c3c;
+  background: var(--bg-surface);
+
   nav {
     ul {
-      @media(max-width: 768px) {
+      display: flex;
+      list-style: none;
+
+      @media (max-width: 768px) {
         display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: repeat(3, 1fr);
         text-align: center;
       }
+
       li {
-        display: inline-block;
         a {
           display: block;
           padding: 1rem 0.5rem;

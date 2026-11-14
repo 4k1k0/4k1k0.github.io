@@ -1,9 +1,9 @@
 footer {
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-  padding-bottom: 1rem;
+  width: min(80%, 65rem);
+  margin-inline: auto;
+  padding-block-end: 1rem;
+
   p {
-    grid-column-start: 2;
     text-align: center;
   }
 }

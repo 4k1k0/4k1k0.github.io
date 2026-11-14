@@ -18,7 +18,7 @@ export class JobExperienceService {
       'Implemented AI tools into the workflow to adopt Spec-Driven Development',
     ],
     tags: ['AWS', 'Software architecture', 'Highly concurrent systems', 'Go', 'Fintech'],
-  }
+  };
 
   kushkiArchitect: JobExperience = {
     title: 'IT Architect',
@@ -33,7 +33,7 @@ export class JobExperienceService {
       'Performance optimization',
     ],
     tags: ['AWS', 'Software architecture', 'Microservices', 'Go', 'Node.js', 'Fintech', 'Internal tools'],
-  }
+  };
 
   techLeadKushki: JobExperience = {
     title: 'Tech Lead',
@@ -48,7 +48,7 @@ export class JobExperienceService {
       'Task delegation and code supervision',
     ],
     tags: ['AWS', 'Team Management', 'Microservices', 'Go', 'Node.js', 'Fintech', 'RxJS'],
-  }
+  };
 
   developerKushki: JobExperience = {
     title: 'Back-end developer',
@@ -62,7 +62,7 @@ export class JobExperienceService {
       'Microservices development and maintenance',
     ],
     tags: ['AWS Lambda', 'Microservices', 'Go', 'Node.js', 'DynamoDB', 'RxJS', 'Fintech'],
-  }
+  };
 
   backArcsa: JobExperience = {
     title: 'Back-end developer',
@@ -71,7 +71,7 @@ export class JobExperienceService {
     fromText: 'April 2019',
     fromTime: '2019-04-01',
     toText: 'December 2020',
-    toTime: '2022-12-01',
+    toTime: '2020-12-01',
     activities: [
       'Team lead',
       'Development and production deployments',
@@ -79,14 +79,14 @@ export class JobExperienceService {
       'GNU/Linux server configuration and administration',
     ],
     tags: ['AWS', 'E-Commerce', 'Node.js', 'PostgreSQL', 'TypeScript', 'WebSockets', 'Team Management']
-  }
+  };
 
   fullStackArcsa: JobExperience = {
     title: 'Full-stack developer',
     company: 'Grupo Arcsa',
     flag: '🇲🇽 Mexico',
     fromText: 'October 2018',
-    fromTime: '2018-08-01',
+    fromTime: '2018-10-01',
     toText: 'April 2019',
     toTime: '2019-04-01',
     activities: [
@@ -97,7 +97,7 @@ export class JobExperienceService {
       'GNU/Linux server configuration and administration',
     ],
     tags: ['Angular', 'E-Commerce', 'Node.js', 'MySQL', 'TypeScript', 'Team Management']
-  }
+  };
 
   fullStackPugs: JobExperience = {
     title: 'Full-stack developer and SysAdmin',
@@ -113,7 +113,7 @@ export class JobExperienceService {
       'Web application development',
     ],
     tags: ['Angular', 'AWS', 'Bash', 'Digital Ocean', 'E-Commerce', 'Firebase', 'MySQL', 'TypeScript', 'Wordpress']
-  }
+  };
 
   freeFirstExperience: JobExperience = {
     title: 'Freelance',
@@ -128,7 +128,7 @@ export class JobExperienceService {
       'Website styling and customization',
     ],
     tags: ['HTML', 'MySQL', 'Wordpress']
-  }
+  };
 
   totalExperience: Array<JobExperience> = [
     this.storiSoftwareEngineer,
@@ -139,6 +139,6 @@ export class JobExperienceService {
     this.fullStackArcsa,
     this.fullStackPugs,
     this.freeFirstExperience,
-  ]
+  ];
 
 }

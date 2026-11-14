@@ -1,31 +1,37 @@
-$verde: #60b48a;
-$amarillo: #f0dfaf;
-
 article {
   header {
-    padding-bottom: 0.5rem;
+    padding-block-end: 0.5rem;
+
     h3 {
-      color: $amarillo;
+      color: var(--color-highlight);
     }
   }
+
   ul {
     li {
       list-style-type: disc;
-      margin-left: 1.5rem;
-      margin-bottom: 0.25rem;
+      margin-inline-start: 1.5rem;
+      margin-block-end: 0.25rem;
     }
   }
+
   .keywords {
-    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-block: 0.5rem;
+    list-style: none;
+
     li {
-      display: inline-block;
+      list-style: none;
+      margin: 0;
       padding: 0.25rem 0.5rem;
-      background: $verde;
-      margin: 0.25rem;
+      background: var(--color-accent);
       text-transform: lowercase;
     }
   }
+
   p {
-    padding-bottom: 0.5rem;
+    padding-block-end: 0.5rem;
   }
 }

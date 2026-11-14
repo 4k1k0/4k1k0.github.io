@@ -1,52 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faBluesky } from '@fortawesome/free-brands-svg-icons';
 import { JobExperience } from '../../models/job_experience.model';
 import { JobExperienceService } from '../../servicios/job_experience.service';
+import { JobExperienceComponent } from './job-experience/job-experience.component';
 
 interface Skill {
   nombre: string;
 }
 
-
 @Component({
   selector: 'app-cv',
+  imports: [FaIconComponent, JobExperienceComponent],
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.scss'],
-  standalone: false
+  styleUrl: './cv.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CvComponent implements OnInit {
-  faEnvelope = faEnvelope;
-  faLinkedin = faLinkedin;
-  faBluesky = faBluesky;
-  faGithub = faGithub;
+export class CvComponent {
+  private readonly jobExperienceService = inject(JobExperienceService);
 
-  skills: Skill[] = [
-    {nombre: 'Angular'},
-    {nombre: 'Git'},
-    {nombre: 'Javascript'},
-    {nombre: 'MongoDB'},
-    {nombre: 'MySQL'},
-    {nombre: 'Node.js'},
-    {nombre: 'PostgreSQL'},
-    {nombre: 'TypeScript'},
-    {nombre: 'Docker'},
-    {nombre: 'AWS'},
-    {nombre: 'Rust'},
-    {nombre: 'Redis'},
-    {nombre: 'Go'},
-    {nombre: 'Elixir'},
-    {nombre: 'REST'},
-  ];
+  readonly faEnvelope = faEnvelope;
+  readonly faLinkedin = faLinkedin;
+  readonly faBluesky = faBluesky;
+  readonly faGithub = faGithub;
 
-  jobExperience: JobExperience[];
+  readonly skills: Skill[] = [
+    { nombre: 'Angular' },
+    { nombre: 'Git' },
+    { nombre: 'Javascript' },
+    { nombre: 'MongoDB' },
+    { nombre: 'MySQL' },
+    { nombre: 'Node.js' },
+    { nombre: 'PostgreSQL' },
+    { nombre: 'TypeScript' },
+    { nombre: 'Docker' },
+    { nombre: 'AWS' },
+    { nombre: 'Rust' },
+    { nombre: 'Redis' },
+    { nombre: 'Go' },
+    { nombre: 'Elixir' },
+    { nombre: 'REST' },
+  ].sort((a, b) => a.nombre.localeCompare(b.nombre, undefined, { sensitivity: 'base' }));
 
-  constructor(private _je: JobExperienceService) {
-    this.jobExperience = _je.totalExperience;
-  }
-
-  ngOnInit() {
-    this.skills.sort((a, b) => a.nombre > b.nombre ? 1 : -1);
-  }
-
+  readonly jobExperience: JobExperience[] = this.jobExperienceService.totalExperience;
 }
